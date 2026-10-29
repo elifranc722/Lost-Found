@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lost & Found </title>
+<link rel="stylesheet" href ="style.css">
+</head>
+<body>
+<div class="wrap">
+  <p class="sub">Temukan barang hilang di lingkungan kampus</p>
+  <div class="tabs">
+    <button class="on" data-t="cari">Cari</button>
+    <button data-t="lapor">Lapor</button>
+    <button data-t="semua">Semua</button>
+  </div>
+
+  <section id="cari">
+    <div class="card">
+      <label>Apa yang kamu cari?</label>
+      <input id="q" placeholder="contoh: dompet hitam, kunci motor, laptop">
+      <div class="row">
+        <div><label>Kategori</label><select id="fc"></select></div>
+        <div><label>Lokasi</label><select id="fl"></select></div>
+      </div>
+    </div>
+    <div id="hasil"></div>
+  </section>
+
+  <section id="lapor" class="hide">
+    <div class="card">
+      <label>Jenis laporan</label>
+      <select id="tipe"><option value="hilang">Saya kehilangan barang</option><option value="ditemukan">Saya menemukan barang</option></select>
+      <label>Nama barang</label><input id="nama" placeholder="contoh: Dompet kulit coklat">
+      <div class="row">
+        <div><label>Kategori</label><select id="kat"></select></div>
+        <div><label>Lokasi</label><select id="lok"></select></div>
+      </div>
+      <label>Tanggal</label><input id="tgl" type="date">
+      <label>Deskripsi (warna, merek, ciri khusus)</label><textarea id="des" rows="3"></textarea>
+      <label>Kontak (WA / email)</label><input id="kon" placeholder="08xxxxxxxxxx">
+      <button class="btn" id="kirim">Kirim laporan</button>
+    </div>
+    <div id="rekom"></div>
+  </section>
+
+  <section id="semua" class="hide"><div id="daftar"></div></section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
